@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.RoomsWindowController">
+    <children>
+        <Label fx:id="roomLabel" layoutX="369.0" layoutY="14.0" text="Rooms">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <VBox layoutX="55.0" layoutY="41.0" prefHeight="339.0" prefWidth="697.0">
+            <children>
+                <TableView fx:id="tableView" prefHeight="300.0" prefWidth="697.0">
+                    <columns>
+                        <TableColumn fx:id="nameColumn" onEditCommit="#changeName" prefWidth="252.0" text="Name" />
+                        <TableColumn fx:id="capacityColumn" onEditCommit="#changeCapacity" prefWidth="218.0" text="Capacity" />
+                        <TableColumn fx:id="equipmentColumn" onEditCommit="#changeEquipment" prefWidth="226.0" text="Equipment" />
+                    </columns>
+                </TableView>
+                <HBox prefHeight="22.0" prefWidth="490.0" spacing="20.0">
+                    <children>
+                        <TextField fx:id="nameTextField" promptText="Room Name" />
+                        <TextField fx:id="capacityTextField" promptText="Room Capacity" />
+                        <ChoiceBox fx:id="equipmentTextField" prefWidth="150.0" />
+                    </children>
+                    <VBox.margin>
+                        <Insets left="10.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+        <Button fx:id="backButton" layoutX="108.0" layoutY="394.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="45.0" prefWidth="106.0" text="Back" />
+        <Button fx:id="addButton" layoutX="347.0" layoutY="394.0" mnemonicParsing="false" onAction="#addRoomButtonPressed" prefHeight="45.0" prefWidth="106.0" text="Add" />
+        <Button fx:id="removeButton" layoutX="579.0" layoutY="394.0" mnemonicParsing="false" onAction="#removeButtonPressed" prefHeight="45.0" prefWidth="106.0" text="Remove" />
+    </children>
+</AnchorPane>

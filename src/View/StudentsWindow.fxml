@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.StudentsWindowController">
+    <children>
+        <Label fx:id="studentLabel" layoutX="361.0" layoutY="14.0" text="Students">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <VBox layoutX="37.0" layoutY="40.0" prefHeight="353.0" prefWidth="725.0">
+            <children>
+                <TableView fx:id="tableView" prefHeight="407.0" prefWidth="650.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" onEditCommit="#changeID" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="nameColumn" onEditCommit="#changeName" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="coursesColumn" onEditCommit="#changeCourses" prefWidth="574.0" text="Courses" />
+                    </columns>
+                </TableView>
+                <HBox prefHeight="67.0" prefWidth="630.0" spacing="30.0">
+                    <children>
+                        <TextField fx:id="idTextField" promptText="Student ID" />
+                        <TextField fx:id="nameTextField" promptText="Student Name" />
+                        <TextField fx:id="coursesTextField" prefHeight="25.0" prefWidth="167.0" promptText="Student Courses eq(SDJ-1Z)" />
+                    </children>
+                    <VBox.margin>
+                        <Insets left="20.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+        <Button fx:id="backButton" layoutX="98.0" layoutY="409.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="51.0" prefWidth="101.0" text="Back" />
+        <Button fx:id="addButton" layoutX="350.0" layoutY="409.0" mnemonicParsing="false" onAction="#addButtonPressed" prefHeight="51.0" prefWidth="101.0" text="Add" />
+        <Button fx:id="removeButton" layoutX="575.0" layoutY="409.0" mnemonicParsing="false" onAction="#removeButtonPressed" prefHeight="51.0" prefWidth="101.0" text="Remove" />
+    </children>
+</AnchorPane>

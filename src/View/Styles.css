@@ -1,0 +1,44 @@
+.root{
+    -fx-background-color: #2d2d2d;
+}
+.label{
+    -fx-font-weight: bold;
+}
+#mainLabel{
+    -fx-text-fill: white;
+}
+#startDateLabel{
+    -fx-text-fill: white;
+}#studentLabel{
+     -fx-text-fill: white;
+ }
+#endDateLabel{
+    -fx-text-fill: white;
+}
+#roomLabel{
+    -fx-text-fill: white;
+}
+#examStudentLabel{
+    -fx-text-fill: white;
+}
+#examLabel{
+    -fx-text-fill: white;
+}
+.button{
+    -fx-background-color: #ababab;
+    -fx-transition-duration: 0.5s;
+    -fx-font-weight: bold;
+    }
+.button:hover{
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+#addButton:hover{
+    -fx-border-color: green;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+#removeButton:hover{
+    -fx-border-color: red;
+    -fx-border-width: 0px 0px 3px 0px;
+}

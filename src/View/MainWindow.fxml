@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainWindowController">
+    <children>
+        <Label fx:id="studentLabel" layoutX="238.0" layoutY="14.0" text="Exam Planner">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="manageStudentsButton" layoutX="236.0" layoutY="264.0" mnemonicParsing="false" onAction="#manageStudentsButtonPressed" prefHeight="50.0" prefWidth="125.0" text="Manage Students" />
+        <Button fx:id="manageRoomsButton" layoutX="236.0" layoutY="350.0" mnemonicParsing="false" onAction="#manageRoomsButtonPressed" prefHeight="50.0" prefWidth="125.0" text="Manage Rooms" />
+        <Button fx:id="manageExamsButton" layoutX="235.0" layoutY="430.0" mnemonicParsing="false" onAction="#manageExamsButtonPressed" prefHeight="50.0" prefWidth="125.0" text="Manage Exams" />
+        <Label fx:id="startDateLabel" layoutX="115.0" layoutY="92.0" text="Start Exam Period">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="endDateLabel" layoutX="368.0" layoutY="88.0" prefHeight="30.0" prefWidth="117.0" text="End Exam Period">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="startDate" layoutX="87.0" layoutY="125.0" />
+        <DatePicker fx:id="endDate" layoutX="340.0" layoutY="125.0" />
+        <Button fx:id="confirmDateButton" layoutX="248.0" layoutY="175.0" mnemonicParsing="false" onAction="#confirmDateButtonPressed" prefHeight="36.0" prefWidth="100.0" text="Confirm Date" />
+        <Button fx:id="exportToXMLButton" layoutX="234.0" layoutY="557.0" mnemonicParsing="false" onAction="#exportToXMLButtonPressed" prefHeight="50.0" prefWidth="125.0" text="Export to XML" />
+    </children>
+</AnchorPane>
